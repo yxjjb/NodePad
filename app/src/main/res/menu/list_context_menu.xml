@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/context_open"
+          android:title="@string/menu_open" />
+    <item android:id="@+id/context_copy"
+          android:title="@string/menu_copy" />
+    <item android:id="@+id/context_delete"
+          android:title="@string/menu_delete" />
+
+
+<!--    <item-->
+<!--        android:id="@+id/background_red"-->
+<!--        android:title="@string/background_red" />-->
+<!--    <item-->
+<!--        android:title="@string/background_color">-->
+<!--        <menu>-->
+<!--            &lt;!&ndash;定义一组选项菜单&ndash;&gt;-->
+<!--            <group android:checkableBehavior="single">-->
+<!--                &lt;!&ndash;定义多个菜单项&ndash;&gt;-->
+<!--                <item-->
+<!--                    android:id="@+id/background_red1"-->
+<!--                    android:title="@string/background_red">-->
+<!--                </item>-->
+<!--                <item-->
+<!--                    android:id="@+id/background_yellow"-->
+<!--                    android:title="@string/background_yellow">-->
+<!--                </item>-->
+<!--                <item-->
+<!--                    android:id="@+id/background_blue"-->
+<!--                    android:title="@string/background_blue">-->
+<!--                </item>-->
+<!--            </group>-->
+<!--        </menu>-->
+<!--    </item>-->
+</menu>
