@@ -24,7 +24,7 @@
 
 ## 代码分析
 ### （1）布局显示标题和时间外加一个图片
-### （2）
+### （2）搜索实现
     public class NoteSearch extends Activity implements SearchView.OnQueryTextListener{
     ListView listview;
     SQLiteDatabase sqLiteDatabase;
@@ -93,4 +93,91 @@
         return true;
     }
 }
+
+### （3）最后还需要在Mainfest 中添加 
+        <activity android:name=".NoteSearch"></activity>
+
+# 二.扩展功能
+## 1.背景轻音乐播放器
+![图片](https://github.com/yxjjb/ThirdTestInterfaceComponent/blob//main/picture/音乐开始播放.png)
+![图片](https://github.com/yxjjb/ThirdTestInterfaceComponent/blob//main/picture/音乐结束播放.png)
+
+## 代码分析
+### 
+    public IBinder onBind(Intent intent) {
+        return null;
+    }
+    //在此方法中服务被创建
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        if (mediaPlayer==null){
+            mediaPlayer=new MediaPlayer();
+
+            //为播放器添加播放完成时的监听器
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                @Override
+                public void onCompletion(MediaPlayer mp) {
+                    //发送广播到MainActivity
+                    Intent intent=new Intent();
+                    intent.setAction("com.complete");
+                    sendBroadcast(intent);
+                }
+            });
+        }
+    }
+    
+    @Override
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        switch (intent.getIntExtra("type",-1)){
+            case NotesList.PLAT_MUSIC:
+                if (isStop){
+                    //重置mediaplayer
+                    mediaPlayer.reset();
+                    //将需要播放的资源与之绑定
+                    mediaPlayer=MediaPlayer.create(this,R.raw.music);
+                    //开始播放
+                    mediaPlayer.start();
+                    //是否循环播放
+                    mediaPlayer.setLooping(false);
+                    isStop=false;
+                }else if (!isStop&&mediaPlayer.isPlaying()&&mediaPlayer!=null){
+                    mediaPlayer.start();
+                }
+                break;
+            case NotesList.PAUSE_MUSIC:
+                //播放器不为空，并且正在播放
+                if (mediaPlayer!=null&&mediaPlayer.isPlaying()){
+                    mediaPlayer.pause();
+                }
+                break;
+            case NotesList.STOP_MUSIC:
+                if (mediaPlayer!=null){
+                    //停止之后要开始播放音乐
+                    mediaPlayer.stop();
+                    isStop=true;
+                }
+                break;
+        }
+        return START_NOT_STICKY;
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+    }
+}
+
+### 最后还需要在Mainfest 中添加 
+        <service android:name=".PlayingMusicServices"
+            android:exported="true"
+            android:enabled="true"/>
+            
+## 2.主界面和搜索界面的部分美化
+![图片](https://github.com/yxjjb/ThirdTestInterfaceComponent/blob//main/picture/时间戳.png)
+![图片](https://github.com/yxjjb/ThirdTestInterfaceComponent/blob//main/picture/搜索.png)
+
+## 3.更改每条记事条目的背景颜色（未实现）
+
+
 
