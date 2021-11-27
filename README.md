@@ -2,7 +2,7 @@
 # 实验内容
 # 一.基本功能
 ## 1.时间戳
-![image](https://github.com/yxjjb/NodePad/blob/main/picture/时间戳.png)
+![image](https://github.com/yxjjb/NodePad/blob/main/picture/%E6%97%B6%E9%97%B4%E6%88%B3.png)
 
 ## 代码分析
 ### （1）首先在布局上先加一个TextView来承载时间戳
