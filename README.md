@@ -8,11 +8,8 @@
 ### （1）首先在布局上先加一个TextView来承载时间戳
 ### （2）在NotesList中的PROJECTION 里添加NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE,//添加修改时间
 ### （3）在NoteList的 dataColumns 和 viewIDs 添加上时间戳和承载时间戳的TextView的id
-        // The names of the cursor columns to display in the view, initialized to the title column
-        String[] dataColumns = { NotePad.Notes.COLUMN_NAME_TITLE, NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE} ;
-        // The view IDs that will display the cursor columns, initialized to the TextView in
-        // noteslist_item.xml
-        int[] viewIDs = { android.R.id.text1, R.id.text2};
+![images](https://github.com/yxjjb/NodePad/blob/main/picture/5.png)
+        
 ### （4）修改一下时间的显示格式 
         long now = System.currentTimeMillis();
         Date date = new Date(now);
@@ -99,8 +96,8 @@
 
 # 二.扩展功能
 ## 1.背景轻音乐播放器
-![图片](https://github.com/yxjjb/NodePad/blob/main/picture/3.png.png)
-![图片](https://github.com/yxjjb/NodePad/blob/main/picture/4.png.png)
+![图片](https://github.com/yxjjb/NodePad/blob/main/picture/3.png)
+![图片](https://github.com/yxjjb/NodePad/blob/main/picture/4.png)
 
 ## 代码分析
 ### 
@@ -177,7 +174,7 @@
 ![images](https://github.com/yxjjb/NodePad/blob/main/picture/1.png)
 ![图片](https://github.com/yxjjb/NodePad/blob/main/picture/2.png)
 
-## 3.更改每条记事条目的背景颜色（未实现）
+#### 3.更改每条记事条目的背景颜色（未实现）
 
 
 
