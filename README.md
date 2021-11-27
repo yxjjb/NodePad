@@ -164,6 +164,19 @@
         super.onDestroy();
     }
 }
+### 添加一个 item 按钮
+        //开始音乐
+        case R.id.btn_startmusic:
+            playingmusic(PLAT_MUSIC);
+            Toast.makeText(this,"音乐开始播放", Toast.LENGTH_SHORT).show();
+            break;
+            
+        private void playingmusic(int type) {
+        //启动服务，播放音乐
+        Intent intent=new Intent(this,PlayingMusicServices.class);
+        intent.putExtra("type",type);
+        startService(intent);
+    }
 
 ### 最后还需要在Mainfest 中添加 
         <service android:name=".PlayingMusicServices"
