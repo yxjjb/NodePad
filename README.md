@@ -2,7 +2,7 @@
 # 实验内容
 # 一.基本功能
 ## 1.时间戳
-![图片](https://github.com/yxjjb/ThirdTestInterfaceComponent/blob//main/picture/时间戳.png)
+![图片](https://github.com/yxjjb/NodePad/blob//main/picture/时间戳.png)
 
 ## 代码分析
 ### （1）首先在布局上先加一个TextView来承载时间戳
@@ -20,7 +20,7 @@
         String dateFormat = simpleDateFormat.format(date);
         
 ## 2.搜索功能
-![图片](https://github.com/yxjjb/ThirdTestInterfaceComponent/blob//main/picture/搜索.png)
+![图片](https://github.com/yxjjb/NodePad/blob//main/picture/搜索.png)
 
 ## 代码分析
 ### （1）布局显示标题和时间外加一个图片
@@ -99,8 +99,8 @@
 
 # 二.扩展功能
 ## 1.背景轻音乐播放器
-![图片](https://github.com/yxjjb/ThirdTestInterfaceComponent/blob//main/picture/音乐开始播放.png)
-![图片](https://github.com/yxjjb/ThirdTestInterfaceComponent/blob//main/picture/音乐结束播放.png)
+![图片](https://github.com/yxjjb/NodePad/blob//main/picture/音乐开始播放.png)
+![图片](https://github.com/yxjjb/NodePad/blob//main/picture/音乐结束播放.png)
 
 ## 代码分析
 ### 
@@ -174,8 +174,8 @@
             android:enabled="true"/>
             
 ## 2.主界面和搜索界面的部分美化
-![图片](https://github.com/yxjjb/ThirdTestInterfaceComponent/blob//main/picture/时间戳.png)
-![图片](https://github.com/yxjjb/ThirdTestInterfaceComponent/blob//main/picture/搜索.png)
+![图片](https://github.com/yxjjb/NodePad/blob//main/picture/时间戳.png)
+![图片](https://github.com/yxjjb/NodePad/blob//main/picture/搜索.png)
 
 ## 3.更改每条记事条目的背景颜色（未实现）
 
