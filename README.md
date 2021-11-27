@@ -187,7 +187,7 @@
 ![images](https://github.com/yxjjb/NodePad/blob/main/picture/1.png)
 ![图片](https://github.com/yxjjb/NodePad/blob/main/picture/7.png)
 
-#### 3.更改每条记事条目的背景颜色（未实现）
+#### 3.更改每条记事条目的背景颜色（待实现）
 
 
 
